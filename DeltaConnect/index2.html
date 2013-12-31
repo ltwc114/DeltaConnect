@@ -1,0 +1,81 @@
+<html>
+	<head>
+	  <title>Delta Connect</title>
+	  
+	  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	  
+	  <link rel="stylesheet" href="/resources/demos/style.css" />
+	  
+	  <script>
+		  $(function() {
+			$( "#datepicker" ).datepicker();
+			var myDate = new Date();
+			var prettyDate =(myDate.getMonth()+1) + '/' + myDate.getDate() + '/' + myDate.getFullYear();
+			$("#datepicker").val(prettyDate);
+		  });
+	  </script>
+	  
+	  <style>
+		body
+		{
+			text-align:center;
+		}
+
+		div 
+		{
+			width:300px;
+			overflow:hidden;
+			text-align:right;
+			padding-left:515px;
+			padding-top:35px;
+		}
+		input
+		{
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+			-moz-background-clip: padding;
+			-webkit-background-clip: padding-box;
+			background-clip: padding-box;
+			border-color:1px solid #cccccc;
+		}
+		p
+		{
+			padding-top: 70px;
+		}
+		input[type=submit] 
+		{
+   		 	width: 10em;
+   		 	font-size: 1em; 
+		}
+		
+	  </style>
+	 
+	</head>
+
+	<body>
+		<h2>Welcome to an Easier Travel Experience</h2>
+
+		<form action="request.php" method="post">
+			<div>
+				<label> Flight #: </label> 
+				<input type="text" name="flightNumber"> <br>
+				<label> Origin Airport:</label> 
+				<input type="text" name="from"> <br>  
+				<label> Destination Airport: </label> 
+				<input type="text" name="to"> <br> </label>
+				<label> Departure Date: </label>
+				<input type="text" id="datepicker" name="date"/> <br><br> 
+			</div>
+			<input type="submit" name ="send" value="Get Standby List" /> <br><br>
+		</form>
+		<font size="5" color="red"> Invalid flight number. Please try again </font> <br> 
+		<img src="takeOff.jpg" alt="Take off" width="600" height="300">
+		<p>Don't know the flight number? Find out <a href="http://www.flightaware.com" target="_blank">here</a> </p>
+
+	</body>
+
+</html>
+
