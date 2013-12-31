@@ -32,8 +32,8 @@
 		$loginFormData[$element->name] = $element->value;
 	}
 
-	$loginFormData["username"] = "081714800";
-	$loginFormData["password"] = "dlfor1me";
+	$loginFormData["username"] = "";
+	$loginFormData["password"] = "";
 
 	//			LOGIN REQUEST				//
 
